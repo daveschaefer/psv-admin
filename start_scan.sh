@@ -13,5 +13,5 @@ fi
 
 echo "starting scan from script at $date" >> logs/scanner.log
 cd Perspectives-Server
-python utilities/list_service_ids.py notary.sqlite all | python threaded_scanner.py notary.sqlite - $rate $timeout >> ../logs/scanner.log 2>&1 &
+python notary_util/list_services.py | python notary_util/threaded_scanner.py --scans $rate --timeout $timeout >> ../logs/scanner.log 2>&1 &
 

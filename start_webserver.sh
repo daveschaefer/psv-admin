@@ -11,5 +11,5 @@ else
 	date=`date`
 	echo "notary_http.py started from script at $date" >> logs/webserver.log
 	cd Perspectives-Server
-	python notary_http.py notary.sqlite notary.priv >> ../logs/webserver.log 2>&1 &
+	python notary_http.py >> ../logs/webserver.log 2>&1 &
 fi 
